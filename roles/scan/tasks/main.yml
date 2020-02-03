@@ -1,0 +1,6 @@
+---
+- name: Fetch Java Version
+  shell: "rpm -q --whatprovides java warn=false"
+  register: res
+- debug:
+   msg: "{{res.stdout}}"
