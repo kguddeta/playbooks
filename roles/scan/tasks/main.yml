@@ -5,10 +5,9 @@
 - debug:
    msg: "{{res.stdout}}"
 - name: copy file
-  file:
+  copy:
    src: /home/mserver/ansible-poc/test.txt
    dest: /tmp/test.txt
-   state: hard
    mode: u+rw,g-wx,o-rwx
 - name: Display Content of file
   shell: "cat /tmp/test.txt"
