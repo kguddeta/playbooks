@@ -4,3 +4,13 @@
   register: res
 - debug:
    msg: "{{res.stdout}}"
+- name: copy file
+  file:
+   src: /home/mserver/ansible-poc/test.txt
+   dest: /tmp/test.txt
+   mode: u+rw,g-wx,o-rwx
+- name: Display Content of file
+  shell: cat /tmp/test.txt
+  register: r
+- debug:
+   msg: "Content : {{r.stdout}}"
