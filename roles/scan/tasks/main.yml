@@ -1,6 +1,6 @@
 ---
 - name: Fetch Java Version
-  shell: "rpm -q --whatprovides java warn=false"
+  shell: "rpm -q --whatprovides java | cut -d'-' -f2 warn=false"
   register: res
 - debug:
    msg: "{{res.stdout}}"
