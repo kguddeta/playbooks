@@ -8,6 +8,7 @@
   file:
    src: /home/mserver/ansible-poc/test.txt
    dest: /tmp/test.txt
+   state: link
    mode: u+rw,g-wx,o-rwx
 - name: Display Content of file
   shell: "cat /tmp/test.txt"
