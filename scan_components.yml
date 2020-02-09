@@ -1,0 +1,12 @@
+---
+- hosts: all
+  gather_facts: false
+  remote_user: root
+  vars:
+   softwares:
+    - java
+    - python
+    - nginx
+    - apache
+  roles:
+   - scan_comp
