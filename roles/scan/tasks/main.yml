@@ -8,7 +8,7 @@
   shell: "cat /tmp/test.txt"
   register: r
 - debug:
-   msg: "Content : {{r.stdout}}"
+   msg: "{{r.stdout}}"
 - name: Fetch Java Version
   shell: "rpm -q --whatprovides java | cut -d'-' -f2 warn=false"
   register: res
