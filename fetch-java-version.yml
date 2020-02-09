@@ -3,7 +3,7 @@
   gather_facts: false
   remote_user: root
   vars:
-   java_version: {{java_ver}}
-   python_version: {{python_ver}}
+   java_version: "{{java_ver}}"
+   python_version: "{{python_ver}}"
   roles:
    - scan
