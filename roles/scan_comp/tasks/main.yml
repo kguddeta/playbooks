@@ -1,6 +1,6 @@
 ---
 - name: Fetch Software Versions
-  shell: "echo {{item}}  && rpm -q --whatprovides {{item}} | cut -d'-' -f2 | tr -d '\n' warn=false"
+  shell: "echo {{item}}| tr -d '\n' echo "-" | tr -d '\n'  && rpm -q --whatprovides {{item}} | cut -d'-' -f2  warn=false"
   register: r
   with_items: "{{softwares}}"
   ignore_errors: yes
