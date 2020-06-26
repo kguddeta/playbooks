@@ -8,5 +8,6 @@
     - python
     - nginx
     - apache
+   delim: " : "
   roles:
    - scan_comp
